@@ -19,8 +19,11 @@ function Card({
           <p className="me-2">disconunt: {discountPercentage}</p>
           <p className="me-2">total: {finalPrice}</p>
         </div>
-        <a href="#" className="btn btn-primary">
+        <a href="#" className="btn btn-primary me-3">
           Comprar
+        </a>
+        <a href="#" className="btn btn-success">
+          Ver
         </a>
       </div>
     </div>

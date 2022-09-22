@@ -18,10 +18,9 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Products />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/product/:id" element={<Example />} />
         <Route path="/about" element={<Text content="About" />} />
         <Route path="/contact" element={<Text content="Contact" />} />
-        <Route path="/example" element={<Example />} />
         <Route path="*" element={<Text content="Page not found" />} />
       </Routes>
     </>

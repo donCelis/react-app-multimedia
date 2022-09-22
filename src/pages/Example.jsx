@@ -1,23 +1,12 @@
+import { useParams } from "react-router-dom"; // hooks
+import { products } from "../data";
+
 function Example() {
-  const { title, description, price, brand, thumbnail } = {
-    id: 2,
-    title: "iPhone X",
-    description:
-      "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-    price: 899,
-    discountPercentage: 17.94,
-    rating: 4.44,
-    stock: 34,
-    brand: "Apple",
-    category: "smartphones",
-    thumbnail: "https://dummyjson.com/image/i/products/2/thumbnail.jpg",
-    images: [
-      "https://dummyjson.com/image/i/products/2/1.jpg",
-      "https://dummyjson.com/image/i/products/2/2.jpg",
-      "https://dummyjson.com/image/i/products/2/3.jpg",
-      "https://dummyjson.com/image/i/products/2/thumbnail.jpg",
-    ],
-  };
+  const { id } = useParams();
+
+  const { title, description, price, brand, thumbnail } = products.find(
+    (item) => item.id === Number(id)
+  );
 
   return (
     <section className="container bg-light my-4">
